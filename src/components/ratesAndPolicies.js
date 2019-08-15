@@ -2,6 +2,8 @@ import React from "react";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 
+import Footer from './footer.js'
+
 const useStyles = makeStyles({
   root: {
     width: "100%",
@@ -11,7 +13,10 @@ const useStyles = makeStyles({
     marginTop: "40px"
   },
   typography: {
-    color: "brown"
+    fontFamily: 'open sans'
+  },
+  title: {
+    color: 'brown'
   }
 });
 
@@ -20,7 +25,7 @@ export default function RatesAndPolicies() {
 
   return (
     <div className={classes.root}>
-      <Typography className={classes.typography} variant="h3" gutterBottom>
+      <Typography className={classes.typography} className={classes.title} variant="h3" gutterBottom>
         Rates and Policies
       </Typography>
       <Typography className={classes.typography} variant="body1" gutterBottom>
@@ -30,6 +35,8 @@ export default function RatesAndPolicies() {
         lessons cost $30. If you need to cancel, please provide at least
         24-hours notice to guarantee a makeup lesson.
       </Typography>
+
+      <Footer /> 
     </div>
   );
 }

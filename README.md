@@ -1,4 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+##acknowledgements
+credit to peter coles for the piano
+https://github.com/mrcoles/javascript-piano
 
 ## Available Scripts
 

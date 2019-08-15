@@ -31,7 +31,7 @@ function MenuButton(props) {
   return (
     <div className={classes.root}>
       <div className={classes.container}>
-        <Hidden lgUp>
+        <Hidden smUp>
             <MenuIcon />
         </Hidden>        
       </div>

@@ -13,7 +13,8 @@ const useStyles = makeStyles({
     marginTop: "40px"
   },
   typography: {
-    color: "brown"
+    //color: "brown"
+    fontFamily: 'open sans'
   }
 });
 

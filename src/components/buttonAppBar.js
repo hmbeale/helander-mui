@@ -8,7 +8,10 @@ import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import { withTheme } from "@material-ui/styles";
 
+import Hidden from '@material-ui/core/Hidden';
+
 import MenuButton from "./menuButton.js";
+import AppBarModal from './appBarModal.js'
 
 import { Link } from 'react-router-dom'
 
@@ -18,17 +21,24 @@ const useStyles = makeStyles(theme => ({
   },
   menuButton: {
     marginRight: theme.spacing(2),
-    color: "brown"
+    color: "black",
+    fontFamily: 'open sans'
   },
   title: {
     flexGrow: 1,
-    color: "brown"
+    color: "brown",
+    fontFamily: 'open sans',
+    
   },
   appBar: {
     backgroundColor: "white"
   },
   link: {
     textDecoration:'underline'
+  },
+  span: {
+    //color: '#2d1309', 
+
   }
 }));
 
@@ -45,19 +55,18 @@ export default function ButtonAppBar() {
             color="inherit"
             aria-label="menu"
           >
-            <MenuButton />
+          <MenuButton />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            Helander School of Music
+            <span className={classes.span }> Helander</span> School of Music
           </Typography>
           
 
-          <Link to='/'><Button className={classes.menuButton} color="inherit"> Home </Button></Link>
-          <Link to='/about'> <Button className={classes.menuButton} color="inherit">About</Button></Link>
-          <Link to='/testimonials' > <Button className={classes.menuButton} color="inherit">Testimonials</Button></Link>
-          <Link to='/ratesAndPolicies' > <Button className={classes.menuButton} color="inherit">Rates and Policies</Button></Link>
-          <Link to='/contact'> <Button className={classes.menuButton} color="inherit"> Contact </Button></Link>
-
+          <Hidden xsDown><Link to='/'><Button className={classes.menuButton} color="inherit"> Home </Button></Link></Hidden>
+          <Hidden xsDown><Link to='/about'> <Button className={classes.menuButton} color="inherit">About</Button></Link></Hidden>
+          <Hidden xsDown><Link to='/testimonials' > <Button className={classes.menuButton} color="inherit">Testimonials</Button></Link></Hidden>
+          <Hidden xsDown><Link to='/ratesAndPolicies' > <Button className={classes.menuButton} color="inherit">Rates and Policies</Button></Link></Hidden>
+          <Hidden xsDown><AppBarModal /></Hidden>
         </Toolbar>
       </AppBar>
     </div>

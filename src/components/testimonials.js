@@ -2,6 +2,8 @@ import React from "react";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 
+import Footer from './footer.js'
+
 const useStyles = makeStyles({
   root: {
     width: "100%",
@@ -11,7 +13,12 @@ const useStyles = makeStyles({
     marginTop: "40px"
   },
   typography: {
-    color: "brown"
+    //color: "brown"
+    fontFamily: 'open sans'
+  },
+  title: {
+    fontFamily: 'open sans',
+    color: 'brown'
   }
 });
 
@@ -20,7 +27,7 @@ export default function Testimonials() {
 
   return (
     <div className={classes.root}>
-      <Typography className={classes.typography} variant="h3" gutterBottom>
+      <Typography className={classes.typography} className = {classes.title} variant="h3" gutterBottom>
         Testimonials
       </Typography>
       <Typography className={classes.typography} variant="body1" gutterBottom>
@@ -67,6 +74,8 @@ export default function Testimonials() {
         while also challenging students in their studies." ~Sarah Kelly,
         Executive Director at Worcester Music Academy
       </Typography>
+
+      <Footer /> 
     </div>
   );
 }
