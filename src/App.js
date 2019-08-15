@@ -20,7 +20,7 @@ import Footer from './components/footer.js'
 
 function App() {
   return (
-    <BrowserRouter>
+    
       <div className="App">
       <ButtonAppBar />
 
@@ -35,8 +35,7 @@ function App() {
       
 
     </div>
-    
-    </BrowserRouter>
+  
     
     
   );
